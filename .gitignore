@@ -1,5 +1,6 @@
 .conda-env/
 outputs/
+data/
 submission_assets/
 submission_assets.zip
 .ipynb_checkpoints/
