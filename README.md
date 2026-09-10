@@ -6,9 +6,11 @@
 
 ## 開始上課
 
+**[先看課程介紹與 Gallery →](intro.md)**
+
 **[開啟 Colab 課程 Notebook →](https://colab.research.google.com/github/jimmy60504/pygmt-map-lab/blob/main/pygmt_workshop.ipynb)**
 
-介紹、範例程式與練習都在同一份 Notebook，跟著課堂由上往下操作即可。
+先在 GitHub 閱讀 GMT、PyGMT 與資料來源介紹，再到 Colab 跟著範例程式與練習操作。
 
 1. 登入 Google 帳號，開啟上方連結。
 2. 將 Notebook 另存副本，作為自己的練習檔。

@@ -27,13 +27,14 @@ python scripts/run_notebook.py
 
 - `python scripts/clear_notebook_images.py`：清除兩份 Notebook 的嵌入圖片與圖片輸出；重跑教材後、上傳 Colab 前可使用。
 
-介紹文字直接在 Notebook 維護。
+課前介紹與 Gallery 在根目錄 `intro.md` 維護；Notebook 保留實作說明與程式。
 
 資料與工具來源：[USGS 地震目錄](https://earthquake.usgs.gov/fdsnws/event/1/)、[GMT 地形](https://docs.generic-mapping-tools.org/latest/datasets/remote-data.html)、[PyGMT 安裝](https://www.pygmt.org/v0.17.0/install.html)、[CondaColab](https://github.com/conda-incubator/condacolab/tree/0.1.x)。
 
 ## 檔案與產物
 
-- `pygmt_workshop.ipynb`：課程主檔，直接維護介紹與程式。
+- `intro.md`：GitHub 上的課前介紹與 Gallery，圖片引用官方網址。
+- `pygmt_workshop.ipynb`：課程實作主檔，維護操作說明與程式。
 - `pygmt_workshop_executed.ipynb`：本機執行紀錄；已移除圖片輸出。
 - `scripts/`：執行與清除圖片的維護工具。
 - `outputs/`、`data/`：執行時產生，不納入 Git。
