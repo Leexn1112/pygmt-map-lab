@@ -8,7 +8,7 @@ GitHub 為主版本；更新後從上方連結重新開啟。私人 repository �
 
 - `pygmt_workshop.ipynb`：學生操作版，簡短中文說明、可執行程式與修改練習。
 - `pygmt_workshop_executed.ipynb`：實際執行版，保留文字結果與資料預覽；為避免 Colab 顯示問題，已清除嵌入圖片與動畫。
-- `outputs/`：5 張主要成果圖、12 個旋轉影格及 GIF。
+- 圖片直接顯示在 Notebook 儲存格下方；執行時另存至 `outputs/`，供下載作業使用，不納入 GitHub。
 - `data/`：USGS 原始 CSV 與對應查詢條件。
 - `scripts/`：教材維護工具，學生上課不需要執行。
 
@@ -42,7 +42,6 @@ python scripts/run_notebook.py
 其他維護工具（在專案根目錄執行）：
 
 - `python scripts/clear_notebook_images.py`：清除兩份 Notebook 的嵌入圖片與圖片輸出；重跑教材後、上傳 Colab 前可使用。
-- `python scripts/make_preview.py`：將 `outputs/` 的五張成果圖整理成預覽圖。
 
 介紹文字直接在 Notebook 維護。
 
