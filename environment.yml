@@ -1,0 +1,14 @@
+name: pygmt-workshop
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pygmt=0.17
+  - gmt=6.5
+  - ghostscript=10.04
+  - pandas
+  - requests
+  - pillow
+  - nbformat
+  - nbclient
+  - ipykernel

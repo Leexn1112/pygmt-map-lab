@@ -1,0 +1,8 @@
+.conda-env/
+submission_assets/
+submission_assets.zip
+.ipynb_checkpoints/
+__pycache__/
+.DS_Store
+.env
+.env.*
