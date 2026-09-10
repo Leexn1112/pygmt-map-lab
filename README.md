@@ -1,48 +1,54 @@
 # PyGMT Map Lab｜地圖實作教室
 
-從台灣海岸線、地震分布到 3D 地形，使用 PyGMT 與 AI 探索科學繪圖。
+從一張台灣地圖開始，探索地震、山脈與海底地形，再把視角轉向世界。
 
-[在 Colab 開啟操作版](https://colab.research.google.com/github/jimmy60504/pygmt-map-lab/blob/main/pygmt_workshop.ipynb)
+這堂課使用 PyGMT，帶你從現成範例修改出自己的地圖。先認識繪圖的基本設定，再嘗試用 AI 協助修改與除錯，將想法做成作品。
 
-GitHub 為主版本；更新後從上方連結重新開啟。私人 repository 需在 Colab 授權有權限的 GitHub 帳號，並非公開教材連結。
+## 開始上課
 
-- `pygmt_workshop.ipynb`：學生操作版，簡短中文說明、可執行程式與修改練習。
-- `pygmt_workshop_executed.ipynb`：實際執行版，保留文字結果與資料預覽；為避免 Colab 顯示問題，已清除嵌入圖片與動畫。
-- 圖片直接顯示在 Notebook 儲存格下方；執行時另存至 `outputs/`，供下載作業使用，不納入 GitHub。
-- 地震 CSV 與查詢條件會在執行時下載至 `data/`，不納入 GitHub。
-- `scripts/`：教材維護工具，學生上課不需要執行。
+**[開啟 Colab 課程 Notebook →](https://colab.research.google.com/github/jimmy60504/pygmt-map-lab/blob/main/pygmt_workshop.ipynb)**
 
-## 使用方式
+介紹、範例程式與練習都在同一份 Notebook，跟著課堂由上往下操作即可。
 
-從上方連結開啟操作版，或在 Google Colab 選擇「上傳 Notebook」。先執行第一個安裝儲存格，等待 kernel 重啟，再執行第二個安裝儲存格及後續內容。首次取得地震與地形資料需要網路，無需預先上傳資料夾。兩份 Notebook 均不嵌入圖片；執行程式時會重新產生圖。
+1. 登入 Google 帳號，開啟上方連結。
+2. 將 Notebook 另存副本，作為自己的練習檔。
+3. 依照「準備環境」的說明執行安裝，再開始畫圖。
 
-依序完成：台灣海岸線 → 地震分布 → 彩色地形 → 3D 視角 → AI 與全球練習 → 隔週 GitHub 繳交。旋轉 GIF 是選做，操作版預設不執行；執行版已開啟並測試。
+目前教材庫為私人，透過 Colab 開啟時需授權有存取權限的 GitHub 帳號；若無法開啟，請向授課者取得教材或存取權限。
 
-## 實跑結果
+## 這堂課會做什麼？
 
-2026-09-09 在本機 macOS ARM64 的獨立 Conda 環境執行，Python 3.12、PyGMT 0.17.0、GMT 6.5.0、Ghostscript 10.04.0。完整 Notebook（含動畫）執行成功，沒有錯誤輸出。
+- **認識 GMT 與 PyGMT**：看看科學地圖能有哪些表現方式。
+- **畫出台灣海岸線**：修改範圍、投影與顏色，了解設定如何影響地圖。
+- **把地震放上地圖**：取得 USGS 地震資料，以點位、大小和顏色呈現事件。
+- **呈現彩色地形**：用高程資料看見山脈與海底起伏。
+- **換個角度看 3D 地形**：調整觀看方向，旋轉動畫作為選做延伸。
+- **用 AI 探索其他地區**：從台灣出發，改畫自己感興趣的區域或全球地圖。
 
-- 真實地震資料：USGS，UTC 2024-04-01 至 2024-05-01，119–123°E、21–26°N、M ≥ 4，共 302 筆有效事件。目錄後續修訂可能造成筆數變化。
-- 台灣地形：GMT earth relief，2 角分，151 × 121 網格；使用較粗資料以加快課堂操作。
-- 全球地形：1 度網格。
-- 3D：固定視角圖，以及每 30 度一格、共 12 格的旋轉 GIF；垂直尺度有誇大。
+先親手修改幾個參數，再使用前一堂課準備的 Codex；Colab Gemini 作為備案。重點是能說明自己畫了什麼、用了哪些資料，以及修改帶來的變化。
 
-已檢查主要成果的海岸線、點位、圖例、色階與座標標籤。**Colab 雲端安裝尚未實測**；本機成功不代表所有 Colab 帳號與環境均可直接安裝，正式上課前需再驗證。
+## 資料從哪裡來？
 
-## 本機重跑
+地震實作主要使用 [USGS 地震目錄](https://earthquake.usgs.gov/fdsnws/event/1/)，並介紹 [台灣 GDMS](https://gdms.cwa.gov.tw/) 這個在地資料管道。地形則透過 PyGMT 取得 [GMT 全球地形資料](https://docs.generic-mapping-tools.org/latest/datasets/remote-data.html)。
 
-```sh
-conda env create -f environment.yml
-conda activate pygmt-workshop
-python scripts/run_notebook.py
-```
+Notebook 會在執行時下載資料並產生圖片，請保持網路連線。
 
-執行器以全新 kernel 跑操作版，開啟選做動畫，輸出至 `pygmt_workshop_executed.ipynb`。會更新同名圖片與下載資料，不修改操作版。此次本機環境位於 `.conda-env/`，已由 `.gitignore` 排除。
+## 隔週繳交作品
 
-其他維護工具（在專案根目錄執行）：
+將練習延伸至自選區域或全球範圍，把 Notebook、成果圖與簡短說明放到自己的 GitHub repository，繳交網址。
 
-- `python scripts/clear_notebook_images.py`：清除兩份 Notebook 的嵌入圖片與圖片輸出；重跑教材後、上傳 Colab 前可使用。
+作品說明請交代：
 
-介紹文字直接在 Notebook 維護。
+- 畫的是哪裡，想呈現什麼？
+- 使用什麼資料，觀察到了什麼？
+- 修改了哪些設定？若使用 AI，它協助了什麼？
 
-資料與工具來源：[USGS 地震目錄](https://earthquake.usgs.gov/fdsnws/event/1/)、[GMT 地形](https://docs.generic-mapping-tools.org/latest/datasets/remote-data.html)、[PyGMT 安裝](https://www.pygmt.org/v0.17.0/install.html)、[CondaColab](https://github.com/conda-incubator/condacolab/tree/0.1.x)。
+具體作品要求以課堂說明為準。圖片會顯示在儲存格下方，也可從 Colab 的 `outputs/` 資料夾下載；Notebook 請另外儲存。
+
+## 想再多探索？
+
+- [PyGMT Gallery](https://www.pygmt.org/v0.17.0/gallery/index.html)：從範例找靈感。
+- [PyGMT 文件](https://www.pygmt.org/v0.17.0/)：查閱函式與參數。
+- [GMT 官方網站](https://www.generic-mapping-tools.org/)：認識背後的繪圖工具。
+
+授課者使用的環境設定與測試紀錄，另見 [教材維護說明](docs/maintenance.md)。
