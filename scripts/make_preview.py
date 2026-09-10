@@ -2,7 +2,7 @@
 from pathlib import Path
 from PIL import Image, ImageOps, ImageDraw
 
-root = Path(__file__).resolve().parent / 'outputs'
+root = Path(__file__).resolve().parents[1] / 'outputs'
 files = sorted(root.glob('0[1-5]_*.png'))
 canvas = Image.new('RGB', (1500, 1200), '#eeeeee')
 for index, path in enumerate(files):

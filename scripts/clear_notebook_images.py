@@ -3,7 +3,7 @@ from pathlib import Path
 import re
 import nbformat
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[1]
 
 def clear_images(notebook):
     for cell in notebook.cells:

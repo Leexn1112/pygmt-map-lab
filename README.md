@@ -10,6 +10,7 @@ GitHub 為主版本；更新後從上方連結重新開啟。私人 repository �
 - `pygmt_workshop_executed.ipynb`：實際執行版，保留文字結果與資料預覽；為避免 Colab 顯示問題，已清除嵌入圖片與動畫。
 - `outputs/`：5 張主要成果圖、12 個旋轉影格及 GIF。
 - `data/`：USGS 原始 CSV 與對應查詢條件。
+- `scripts/`：教材維護工具，學生上課不需要執行。
 
 ## 使用方式
 
@@ -33,9 +34,16 @@ GitHub 為主版本；更新後從上方連結重新開啟。私人 repository �
 ```sh
 conda env create -f environment.yml
 conda activate pygmt-workshop
-python run_notebook.py
+python scripts/run_notebook.py
 ```
 
 執行器以全新 kernel 跑操作版，開啟選做動畫，輸出至 `pygmt_workshop_executed.ipynb`。會更新同名圖片與下載資料，不修改操作版。此次本機環境位於 `.conda-env/`，已由 `.gitignore` 排除。
+
+其他維護工具（在專案根目錄執行）：
+
+- `python scripts/clear_notebook_images.py`：清除兩份 Notebook 的嵌入圖片與圖片輸出；重跑教材後、上傳 Colab 前可使用。
+- `python scripts/make_preview.py`：將 `outputs/` 的五張成果圖整理成預覽圖。
+
+介紹文字直接在 Notebook 維護。
 
 資料與工具來源：[USGS 地震目錄](https://earthquake.usgs.gov/fdsnws/event/1/)、[GMT 地形](https://docs.generic-mapping-tools.org/latest/datasets/remote-data.html)、[PyGMT 安裝](https://www.pygmt.org/v0.17.0/install.html)、[CondaColab](https://github.com/conda-incubator/condacolab/tree/0.1.x)。

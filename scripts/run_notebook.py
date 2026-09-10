@@ -3,7 +3,7 @@ from pathlib import Path
 import nbformat
 from nbclient import NotebookClient
 
-root = Path(__file__).resolve().parent
+root = Path(__file__).resolve().parents[1]
 nb = nbformat.read(root / 'pygmt_workshop.ipynb', as_version=4)
 for i, cell in enumerate(nb.cells):
     cell['id'] = f'workshop-{i:02d}'
