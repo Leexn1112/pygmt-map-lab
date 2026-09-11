@@ -21,7 +21,7 @@ conda activate pygmt-workshop
 python scripts/run_notebook.py
 ```
 
-執行器以全新 kernel 跑操作版，開啟選做動畫，輸出至 `pygmt_workshop_executed.ipynb`。會更新同名圖片與下載資料，不修改操作版。此次本機環境位於 `.conda-env/`，已由 `.gitignore` 排除。
+執行器以全新 kernel 跑操作版（含旋轉拉桿初始畫面），輸出至 `pygmt_workshop_executed.ipynb`，不修改操作版。目前旋轉 GIF 已改成 AI 展示的 ipywidgets 拉桿，不再輸出影格檔案。此次本機環境位於 `.conda-env/`，已由 `.gitignore` 排除。
 
 其他維護工具（在專案根目錄執行）：
 
@@ -37,6 +37,6 @@ python scripts/run_notebook.py
 - `pygmt_workshop.ipynb`：課程實作主檔，維護操作說明與程式。
 - `pygmt_workshop_executed.ipynb`：本機執行紀錄；已移除圖片輸出。
 - `scripts/`：執行與清除圖片的維護工具。
-- 根目錄的 `01_`–`05_` 成果 PNG、`outputs/`（選做動畫）：執行時產生，不納入 Git。地震資料直接由 USGS 查詢網址讀取，不再建立本機快取或查詢 JSON。
+- 圖片直接顯示在 Notebook，不另存 PNG；旋轉地形使用拉桿，不再產生 GIF。地震資料直接由 USGS 查詢網址讀取，不再建立本機快取或查詢 JSON。
 
 GitHub 為教材主版本；更新後需從課程連結重新開啟，已另存的學生副本不會自動更新。
