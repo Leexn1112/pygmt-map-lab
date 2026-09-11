@@ -1,5 +1,6 @@
 .conda-env/
 outputs/
+0[1-5]_*.png
 data/
 submission_assets/
 submission_assets.zip

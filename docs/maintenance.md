@@ -37,6 +37,6 @@ python scripts/run_notebook.py
 - `pygmt_workshop.ipynb`：課程實作主檔，維護操作說明與程式。
 - `pygmt_workshop_executed.ipynb`：本機執行紀錄；已移除圖片輸出。
 - `scripts/`：執行與清除圖片的維護工具。
-- `outputs/`、`data/`：執行時產生，不納入 Git。
+- 根目錄的 `01_`–`05_` 成果 PNG、`outputs/`（選做動畫）、`data/`：執行時產生，不納入 Git。
 
 GitHub 為教材主版本；更新後需從課程連結重新開啟，已另存的學生副本不會自動更新。
