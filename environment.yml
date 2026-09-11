@@ -7,7 +7,6 @@ dependencies:
   - gmt=6.5
   - ghostscript=10.04
   - pandas
-  - requests
   - pillow
   - nbformat
   - nbclient
