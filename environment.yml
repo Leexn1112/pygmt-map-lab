@@ -12,3 +12,5 @@ dependencies:
   - nbclient
   - ipykernel
   - ipywidgets
+  - ipyleaflet
+  - pyproj
