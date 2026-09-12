@@ -5,6 +5,7 @@ import numpy as np
 import xarray as xr
 import pandas
 import PIL
+from PIL import Image
 import ipywidgets
 import ipyleaflet
 import pyproj
@@ -21,7 +22,7 @@ with tempfile.TemporaryDirectory() as directory:
     fig.grdcontour(grid=grid, interval=500, annotation=1000)
     path = Path(directory) / 'smoke.png'
     fig.savefig(path)
-    with PIL.Image.open(path) as image:
+    with Image.open(path) as image:
         assert image.width > 100 and image.height > 100
         image.verify()
     selected = pygmt.project(data=[[121, 23, 10, 4]], center=[120, 22], endpoint=[122, 25],
