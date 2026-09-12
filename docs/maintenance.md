@@ -21,6 +21,8 @@
 
 ## 本機重跑
 
+Colab 使用 Conda／mamba 安裝。三份環境格會先檢查，套件已可用時跳過安裝。
+
 ```sh
 conda env create -f environment.yml
 conda activate pygmt-workshop
