@@ -1,0 +1,20 @@
+name: pygmt-map-lab
+version: 0.1.0
+installer_type: sh
+channels:
+  - conda-forge
+specs:
+  # Matches condacolab 0.1.13 TARGET_PYTHON. Refuse other Colab versions.
+  - python=3.13
+  - pip
+  - conda
+  - mamba
+  - pygmt=0.17
+  - gmt=6.5
+  - ghostscript=10.04
+  - pandas
+  - pillow
+  - ipykernel
+  - ipywidgets
+  - ipyleaflet
+  - pyproj
