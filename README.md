@@ -8,7 +8,7 @@
 
 **[先看課程介紹與 Gallery →](intro.md)**
 
-三份 Notebook 各自包含環境設置，可獨立開始（不是三節課的時間分配）：
+三份 Notebook 各自包含環境設置，可獨立開始：
 
 - [01｜基本地圖與地震](https://colab.research.google.com/github/jimmy60504/pygmt-map-lab/blob/main/01_maps_earthquakes.ipynb)
 - [02｜地形與 3D](https://colab.research.google.com/github/jimmy60504/pygmt-map-lab/blob/main/02_terrain_3d.ipynb)
