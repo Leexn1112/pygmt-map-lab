@@ -1,6 +1,6 @@
 # 課程介紹｜從 GMT 到自己的地圖
 
-[回課程首頁](README.md) · [開始 Colab 實作](https://colab.research.google.com/github/jimmy60504/pygmt-map-lab/blob/main/pygmt_workshop.ipynb)
+[回課程首頁](README.md) · [開始 Colab 實作](https://colab.research.google.com/github/jimmy60504/pygmt-map-lab/blob/main/01_maps_earthquakes.ipynb)
 
 先認識工具、看看作品，再打開 Notebook 動手畫圖。這份介紹可直接在 GitHub 閱讀。
 
@@ -87,4 +87,4 @@ PyGMT 負責繪圖，地震資料需要從資料服務取得。本次使用的�
 
 ## 接著動手做
 
-[開啟課程 Notebook](https://colab.research.google.com/github/jimmy60504/pygmt-map-lab/blob/main/pygmt_workshop.ipynb)，另存自己的副本，從「準備環境」開始。先親手改參數，再進入 AI 延伸練習。
+[開啟課程 Notebook](https://colab.research.google.com/github/jimmy60504/pygmt-map-lab/blob/main/01_maps_earthquakes.ipynb)，另存自己的副本，從「準備環境」開始。先親手改參數，再進入 AI 延伸練習。
