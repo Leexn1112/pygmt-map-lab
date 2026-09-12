@@ -23,6 +23,14 @@
 
 Colab 使用 Conda／mamba 安裝。三份環境格會先檢查，套件已可用時跳過安裝。
 
+各份只明列自己的套件；相依套件由 mamba 自動安裝：
+
+- 基本地圖與地震：PyGMT、GMT、Ghostscript、Pandas。
+- 地形與 3D：PyGMT、GMT、Ghostscript、ipywidgets。
+- AI 探索：PyGMT、GMT、Ghostscript、Pandas、NumPy、ipywidgets、ipyleaflet、pyproj。
+
+環境可用性檢查也依各份需求執行，不會因其他篇章的套件未安裝而重跑安裝。此調整未在 Colab 重新計時；PyGMT／GMT 自身的相依套件仍會下載。
+
 ```sh
 conda env create -f environment.yml
 conda activate pygmt-workshop
