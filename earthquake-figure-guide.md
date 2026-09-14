@@ -62,9 +62,11 @@
 
 先認清變數，再選色票。深度、滑移量等有大小次序的量，可考慮循序色階；相對參考值的正負異常，可考慮以零為中心的發散色階；事件分類則用類別色。社群慣用配色可以認識，但不必當成唯一正解。
 
-本課使用 `gmt/seis` 畫深度，是示範選擇，不是地震學的強制標準。彩虹色階辨識色段容易，但亮度變化可能造成視覺上的假邊界，也要留意色覺差異。請學生比較同一資料換色後，哪些構造突然變明顯或消失，而不只問「哪個比較漂亮」。色票入口：[GMT 色票與圖例文件](https://docs.generic-mapping-tools.org/6.1/cookbook/cpts.html)。
+本課使用 `batlow` 畫深度，是示範選擇，不是地震學的強制標準；Notebook 也提供 `gmt/seis` 作對照。彩虹色階辨識色段容易，但亮度變化可能造成視覺上的假邊界，也要留意色覺差異。請學生比較同一資料換色後，哪些構造突然變明顯或消失，而不只問「哪個比較漂亮」。色票入口：[GMT 色票與圖例文件](https://docs.generic-mapping-tools.org/6.1/cookbook/cpts.html)。
 
 ### 先逛逛論文的圖，找找靈感
+
+課堂收集的實例與評語見 [論文圖收集](figure-examples.md)。
 
 不用一開始就讀懂整篇 paper。先到 [Google Scholar](https://scholar.google.com/) 搜尋 `seismic`、`earthquake` 或 `seismicity`，也可以加上 `Taiwan`、`subduction`、`cross section`、`waveform` 等地區或圖像關鍵字。或先用 Google 圖片搜尋，看到有興趣的圖，再回到原論文看圖說。
 
