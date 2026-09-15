@@ -12,9 +12,7 @@ dependencies:
   - nbclient
   - ipykernel
   - ipywidgets
-  - ipyleaflet
-  - pyproj
-  - xarray
+  # 以下只有 scripts/prototype_*.py 需要；三份 Notebook 不用
   - netcdf4
   - scipy
   - requests

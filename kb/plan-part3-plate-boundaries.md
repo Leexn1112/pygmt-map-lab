@@ -148,7 +148,7 @@
 | 檔案 | 動作 |
 | --- | --- |
 | `plate-boundaries.md`（已建） | 世界交界帶整理表，從 Notebook 03 抽出；三大類訊號表留在 Notebook |
-| `03_ai_exploration.ipynb` | 第 5 節改為：全球總覽 cell → 區域範本 cell（地圖＋剖面，參數化，深度三段分級）→ 選區步驟與提示詞。ipyleaflet 版剖面改為選用，範圍改成參數。第 6 節換新作業規範 |
+| `03_ai_exploration.ipynb` | 第 5 節改為：全球總覽 cell → 區域範本 cell（地圖＋剖面，參數化，深度三段分級）→ 選區步驟與提示詞。ipyleaflet 互動剖面已移除（Colab 圖磚 403、安裝過久），A、B 直接填座標。第 6 節換新作業規範 |
 | `README.md`、`kb/lesson-plan.md`、`kb/teaching-script.md` | 03 摘要與作業段改寫；原資料靈感表格移到進階選項 |
 | `kb/maintenance.md` | 補測試紀錄 |
 
