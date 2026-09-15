@@ -1,6 +1,6 @@
 # 論文圖收集：漂亮的和普通的，放在一起看
 
-給學生一個感覺用的。能登上論文的圖，功能大多是有的；這裡只看三件事：**清不清楚、色調好不好看、比例與版面順不順眼。** 展示前確認原文授權並註明出處。
+給學生一個感覺用的。能登上論文的圖，功能大多是有的；這裡只看三件事：**清不清楚、色調好不好看、比例與版面順不順眼。** 圖片直接連到期刊網站顯示，各篇授權標在圖下；除埃及那篇為 CC BY-NC-ND 外都是 CC BY 4.0。
 
 ## 怎麼看、怎麼跟 AI 討論
 
@@ -17,6 +17,10 @@
 
 [Fig. 1](https://www.nature.com/articles/s43247-026-04037-2/figures/1)。區域圖 → 海底地形 → 局部放大 → 剖面，四張子圖層層縮放。
 
+![孟加拉扇區域圖與河道改道](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs43247-026-04037-2/MediaObjects/43247_2026_4037_Fig1_HTML.png)
+
+*圖：Communications Earth & Environment (2026), CC BY 4.0。*
+
 - **清楚**：每張框出下一張的範圍並直接寫 `Fig. 1B`；紅色＝活動河道、黑虛線＝廢棄河道，四張一致。
 - **色調**：低飽和地形當底，藍色河系、綠色扇體、紅色主題浮在上面；B、C 各自換色階讓細節出來。
 - **比例**：子圖大小依內容分配，比例尺 400 km → 20 km → 5 km 一路縮放不混淆。
@@ -26,6 +30,10 @@
 
 [Fig. 1](https://www.nature.com/articles/s41586-025-09525-7/figures/1)。地圖 ＋ 機制解方位 ＋ 三條橫切剖面 ＋ 一條長剖面，三萬多個地震。
 
+![聖托里尼群震地圖與剖面](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41586-025-09525-7/MediaObjects/41586_2025_9525_Fig1_HTML.png)
+
+*圖：Nature (2025), CC BY 4.0。*
+
 - **清楚**：地圖用深度上色、剖面用時間上色，兩套色階一眼分得開；剖面線在地圖上標好，長剖面再用虛線標回短剖面位置；圖例把每種符號都列出來。
 - **色調**：灰階陰影地形與細灰斷層退到背景，彩色地震帶浮出來；地名沿構造走向排字。
 - **比例**：三條短剖面共用軸，長剖面橫跨底部，右欄窄、左欄寬，版面平衡。
@@ -34,6 +42,10 @@
 ### 3. 地震陣列偵測烏克蘭戰事：四個時段的密度圖（Nature, 2023）
 
 [Fig. 3](https://www.nature.com/articles/s41586-023-06416-7/figures/3)。同一範圍四張並排，一個時段一張，密度色暈上疊白天／夜間偵測點。
+
+![四個時段的偵測密度圖](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41586-023-06416-7/MediaObjects/41586_2023_6416_Fig3_HTML.png)
+
+*圖：Nature (2023), CC BY 4.0。*
 
 - **清楚**：四格版面完全相同，只換資料，眼睛不用重新定位；藍點夜間、綠點白天就是整個論點；佔領區灰底只出現在該出現的時段。
 - **色調**：近白底圖、淺灰州名、淺藍水庫，紅黃色暈是唯一亮色。
@@ -46,6 +58,10 @@
 
 [Fig. 1](https://www.nature.com/articles/s41586-024-07245-y/figures/1)。地圖 ＋ 四條剖面 ＋ 11 個沙灘球排在圖外。作業的安全模板。
 
+![Esmeraldas 地震序列地圖與剖面](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41586-024-07245-y/MediaObjects/41586_2024_7245_Fig1_HTML.png)
+
+*圖：Nature (2024), CC BY 4.0。*
+
 - **清楚**：灰陸地、白海洋、黑色空心圓，彩色只給主震星形、兩個關鍵機制解、剖面線與測站；印黑白也不失資訊。剖面畫上板塊模型線，地圖上同一模型畫成等深線。
 - **色調**：克制，沒有地形，不花但也不亂。
 - **比例**：剖面只畫 15–25 km，薄薄的地震面才看得到；沙灘球排四周不擋圖，但引線穿過地震帶還互相交叉。
@@ -57,6 +73,10 @@
 
 [Fig. 1](https://www.nature.com/articles/s41597-026-07523-6/figures/1)。灰階地形上的地震點，依 Mw 上色。幾乎就是 01 Notebook 的第一張圖。
 
+![義大利地震目錄震央分布](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41597-026-07523-6/MediaObjects/41597_2026_7523_Fig1_HTML.png)
+
+*圖：Scientific Data (2026), CC BY 4.0。*
+
 - **清楚**：點全部一樣大，密集區疊成一片；沒有比例尺。
 - **色調**：白→黃→紅→黑的 `hot` 色階，最多的小地震最亮，大地震反而沉下去；黃紅對色覺差異也不友善。黑白相間圖框一看就是 GMT 預設。
 - **比例**：色條分級 3.5、3.9、4.3…以 0.4 為間隔，不好對照。
@@ -66,6 +86,10 @@
 
 [Fig. 1](https://www.nature.com/articles/s41598-026-51640-6/figures/1)。位置圖、測站圖、地震圖各一張。
 
+![埃及東北部位置圖、測站與地震](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41598-026-51640-6/MediaObjects/41598_2026_51640_Fig1_HTML.png)
+
+*圖：Scientific Reports (2026), CC BY-NC-ND 4.0，未修改。*
+
 - **清楚**：資料各畫各的，地震沒疊斷層、斷層沒疊地震；A 拉兩條斜引線到 B 和 C 的角落，分散注意力；粉紅、綠色區塊沒說明。
 - **色調**：三張子圖的海分別是青色、沒上色、亮藍，不像同一套；C 的粉紅小事件鋪滿全圖。
 - **比例**：子圖大小不一、外框不一致，測站標籤擠成一團，比例尺與北箭頭壓在資料上。
@@ -73,6 +97,11 @@
 ### 3. 一整篇論文：土耳其 2023 地震序列的 InSAR 與 GNSS 模型（Remote Sensing, 2025）
 
 [Cheloni et al. 2025](https://www.mdpi.com/2072-4292/17/13/2270)，18 張圖，開放取用。功能都有，但翻完沒有一張讓人停下來。
+
+![土耳其 2023 地震序列構造背景圖](https://www.mdpi.com/remotesensing/remotesensing-17-02270/article_deploy/html/images/remotesensing-17-02270-g001-550.jpg)
+![應變率圖](https://www.mdpi.com/remotesensing/remotesensing-17-02270/article_deploy/html/images/remotesensing-17-02270-g016-550.jpg)
+
+*圖 1 與圖 16：Remote Sensing (2025), CC BY 4.0。*
 
 - **清楚**：圖 1 所有斷層同樣粗細，年份、城市、板塊名擠在一起；圖 11 沒有海岸線，不知道自己在哪；圖例常寫在圖說裡要翻回去查。
 - **色調**：青色海、白陸地、`hot` 色階、預設字型，整篇是 GMT 5 沒調整的樣子；圖 16 整張被黃紅黑填滿。
@@ -82,6 +111,11 @@
 ## 特別講一下：色條要亮度線性
 
 [Crameri, Shephard & Heron (2020), *The misuse of colour in science communication*, Nature Communications](https://www.nature.com/articles/s41467-020-19160-7)。開放取用，圖可以直接拿來上課。
+
+![jet 與 batlow 的比較](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41467-020-19160-7/MediaObjects/41467_2020_19160_Fig1_HTML.png)
+![色覺缺陷與灰階下的色票](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41467-020-19160-7/MediaObjects/41467_2020_19160_Fig2_HTML.png)
+
+*Fig. 1 與 Fig. 2：Nature Communications (2020), CC BY 4.0。*
 
 - **看 Fig. 1**：同一張地球、蘋果與居禮夫人照片，分別用 `jet`（彩虹）和 `batlow` 上色。彩虹版在臉上和地球上冒出原本沒有的邊界與色塊；`batlow` 版看起來就是原圖變了顏色。資料的長相通常事先不知道，所以彩虹造成的假邊界不會被發現。
 - **看 Fig. 2**：幾種色票在三種色覺缺陷與灰階下的樣子。`viridis`、`batlow` 等亮度單調上升的色票，轉成灰階仍是一條順的漸層；`jet` 轉灰階變成中間亮、兩頭暗，順序整個消失。
