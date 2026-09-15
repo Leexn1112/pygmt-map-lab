@@ -126,6 +126,21 @@ Notebook 03 的範本已經把前四項接好；後面幾項是佐證用的補�
 - [PyGMT 文件](https://www.pygmt.org/v0.17.0/)：查閱函式與參數。
 - [GMT 官方網站](https://www.generic-mapping-tools.org/)：認識背後的繪圖工具。
 
+**把圖畫得好看、讓人讀得懂**
+
+- [Nature 圖像規範](https://research-figure-guide.nature.com/figures/preparing-figures-our-specifications/)：期刊對字級、線寬、解析度、色彩與版面的要求，可當作自己作品的檢查表。
+- [Seismica 投稿檢查表](https://seismica.library.mcgill.ca/submission-checklist)：地震學期刊對色票與可及性的要求，包含不用彩虹色票。
+- [Points of View: Color blindness](https://www.nature.com/articles/nmeth.1618)：一頁講完為什麼紅綠對比不可靠，以及色覺友善的配色原則。
+- [Coblis 色覺模擬器](https://www.color-blindness.com/coblis-color-blindness-simulator/)：把自己的圖丟進去，看不同色覺的人看到什麼。
+
+**科學用的色票（CPT）**
+
+- [GMT 色票總覽](https://docs.generic-mapping-tools.org/6.5/reference/cpts.html)：課堂用的 `geo`、`abyss`、`batlow`、`roma` 都在這裡，分成 GMT 內建、cmocean、Scientific Colour Maps 三組。
+- [Scientific Colour Maps（Crameri）](https://www.fabiocrameri.ch/colourmaps/)：感知均勻、色覺友善的色票；循序用 batlow，發散用 vik 或 roma，地形用 oleron。GMT 已內建，`makecpt(cmap="batlow")` 直接用。
+- [The misuse of colour in science communication（Crameri et al. 2020, Nature Communications）](https://www.nature.com/articles/s41467-020-19160-7)：為什麼彩虹色票會扭曲資料，附各種資料類型該用哪種色票。
+- [cmocean](https://matplotlib.org/cmocean/)：海洋學色票，深度用 deep，地形用 topo，速度異常用 balance；GMT 內建。
+- [ColorBrewer](https://colorbrewer2.org/)：分類與分級用的離散配色，可勾選色覺友善與適合印刷。
+
 ## 補充資料索引
 
 給學生看的：
