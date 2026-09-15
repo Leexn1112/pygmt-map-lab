@@ -30,7 +30,7 @@
 
 [Fig. 1](https://www.nature.com/articles/s41586-025-09525-7/figures/1)。地圖 ＋ 機制解方位 ＋ 三條橫切剖面 ＋ 一條長剖面，三萬多個地震。
 
-![聖托里尼群震地圖與剖面](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41586-025-09525-7/MediaObjects/41586_2025_9525_Fig1_HTML.png)
+![聖托里尼群震地圖與剖面](https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs41586-025-09525-7/MediaObjects/41586_2025_9525_Fig1_HTML.png)
 
 *圖：Nature (2025), CC BY 4.0。*
 
@@ -98,10 +98,7 @@
 
 [Cheloni et al. 2025](https://www.mdpi.com/2072-4292/17/13/2270)，18 張圖，開放取用。功能都有，但翻完沒有一張讓人停下來。
 
-![土耳其 2023 地震序列構造背景圖](https://www.mdpi.com/remotesensing/remotesensing-17-02270/article_deploy/html/images/remotesensing-17-02270-g001-550.jpg)
-![應變率圖](https://www.mdpi.com/remotesensing/remotesensing-17-02270/article_deploy/html/images/remotesensing-17-02270-g016-550.jpg)
-
-*圖 1 與圖 16：Remote Sensing (2025), CC BY 4.0。*
+MDPI 不讓外站直接顯示圖片，請點連結看：[圖 1 構造背景](https://www.mdpi.com/2072-4292/17/13/2270#fig_body_display_remotesensing-17-02270-f001)、[圖 16 應變率](https://www.mdpi.com/2072-4292/17/13/2270#fig_body_display_remotesensing-17-02270-f016)。
 
 - **清楚**：圖 1 所有斷層同樣粗細，年份、城市、板塊名擠在一起；圖 11 沒有海岸線，不知道自己在哪；圖例常寫在圖說裡要翻回去查。
 - **色調**：青色海、白陸地、`hot` 色階、預設字型，整篇是 GMT 5 沒調整的樣子；圖 16 整張被黃紅黑填滿。
