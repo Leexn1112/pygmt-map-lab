@@ -1,6 +1,6 @@
 """3D 海底方塊 + 切面地震：以中大西洋洋脊為例。
 只畫切線以北的半塊地形，方塊南緣就是切面，`plane` 把切面塗灰，走廊內地震投到切面上；
-下面配一張世界地圖標出研究區、一張平面圖、一張 2D 剖面。
+右邊小地球儀標出研究區與切線；下面配一張平面圖、一張 2D 剖面。
 
 輸出：ridge_block_3d.png
 資料：USGS 地震目錄 API、GMT 全球地形 2 角分。
@@ -57,16 +57,17 @@ fig.plot3d(x=corridor.longitude, y=[CUT_LAT] * len(corridor), z=-corridor.depth,
            style="c", pen="0.3p,black", transparency=20,
            perspective=PERSPECTIVE, region=north + [Z_MIN_KM, 0], projection=f"M{WIDTH_CM}c", zsize=f"{ZSIZE_CM}c")
 
-# (b) 世界地圖：紅框是研究區，虛線是切線
-fig.shift_origin(yshift="-8c")
-fig.coast(region="d", projection=f"N{(REGION[0] + REGION[1]) / 2}/12c", land="gray80", water="white",
-          shorelines="0.2p,gray50", frame=["+tWhere is this box?", "g30"])
+# (b) 小地球儀放在 3D 方塊右邊：紅框是研究區，紅虛線是切線
+fig.shift_origin(xshift="16.5c", yshift="2c")
+lon_c, lat_c = (REGION[0] + REGION[1]) / 2, (REGION[2] + REGION[3]) / 2
+fig.coast(region="g", projection=f"G{lon_c}/{lat_c}/3.5c", land="gray75", water="white", frame="g")
 fig.plot(x=[REGION[0], REGION[1], REGION[1], REGION[0]], y=[REGION[2], REGION[2], REGION[3], REGION[3]],
-         close=True, pen="1.5p,red")
-fig.plot(x=[REGION[0], REGION[1]], y=[CUT_LAT, CUT_LAT], pen="1p,red,--")
+         close=True, pen="1.2p,red")
+fig.plot(x=[REGION[0], REGION[1]], y=[CUT_LAT, CUT_LAT], pen="0.8p,red,--")
+fig.shift_origin(xshift="-16.5c", yshift="-2c")
 
 # (c) 平面圖：切線與走廊
-fig.shift_origin(yshift="-9.5c")
+fig.shift_origin(yshift="-9c")
 pygmt.makecpt(cmap="abyss", series=[-6, -1])
 fig.grdimage(grid=grid, region=REGION, projection="M7c", cmap=True, shading="+a-45+nt0.8",
              frame=["WSne+tMap view", "xa4f2", "ya2f1"])
@@ -80,15 +81,15 @@ fig.plot(x=quakes.longitude, y=quakes.latitude, size=quakes.mag.apply(mag_size) 
 fig.basemap(map_scale=f"jBL+c{CUT_LAT}+w200k+o0.4c/0.4c+f+lkm")
 fig.colorbar(frame="a5+lDepth (km)", position="JBC+o0c/1.2c+w6c/0.3c+h")
 
-# (d) 2D 剖面
-fig.shift_origin(xshift="8.5c")
+# (d) 2D 剖面（標題縮短，走廊與 VE 寫在圖內，避免壓到左邊的平面圖）
+fig.shift_origin(xshift="9c")
 track = pygmt.grdtrack(points=pd.DataFrame({"lon": np.arange(REGION[0], REGION[1] + 1e-9, 0.05), "lat": CUT_LAT}),
                        grid=grid, newcolname="z")
 sec_w, sec_h = 12, 6
 ve_2d = (sec_h / abs(Z_MIN_KM)) / (sec_w / width_km)
 fig.basemap(region=[REGION[0], REGION[1], Z_MIN_KM, 0], projection=f"X{sec_w}c/{sec_h}c",
-            frame=[f"WSne+tSection along {CUT_LAT:.0f}N, corridor +/-{HALF_WIDTH_DEG} deg (VE ~{ve_2d:.0f}x)",
-                   "xa4f2+lLongitude (deg)", "ya5f1+lz (km)"])
+            frame=[f"WSne+tSection along {CUT_LAT:.0f}N", "xa4f2+lLongitude (deg)", "ya5f1+lz (km)"])
+fig.text(text=f"corridor +/-{HALF_WIDTH_DEG} deg, VE ~{ve_2d:.0f}x", position="TR", offset="-0.2c/-0.2c", font="8p")
 fig.plot(x=track.lon, y=track.z, pen="1p,black")
 fig.plot(x=corridor.longitude, y=-corridor.depth, size=corridor.mag.apply(mag_size),
          fill=corridor.depth, cmap=True, style="c", pen="0.3p,black", transparency=20)
