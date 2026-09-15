@@ -143,19 +143,7 @@ Notebook 03 的範本已經把前四項接好；後面幾項是佐證用的補�
 
 ## 補充資料索引
 
-給學生看的：
-
 - [intro.md](intro.md)：課前介紹，認識 GMT、PyGMT、官方 Gallery 與地震資料來源。
 - [plate-boundaries.md](plate-boundaries.md)：世界板塊交界帶整理表，第三部分選區域用；附範圍、兩側板塊與佐證提示。
 - [earthquake-figure-guide.md](earthquake-figure-guide.md)：地震學常見圖像，每種圖想回答什麼、怎麼讀，附範例。
 - [figure-examples.md](figure-examples.md)：論文圖收集，漂亮的和普通的放在一起比較。
-
-給授課者看的（`kb/`）：
-
-- [kb/lesson-plan.md](kb/lesson-plan.md)：課程教案。
-- [kb/teaching-script.md](kb/teaching-script.md)：教學腳本。
-- [kb/plan-part3-plate-boundaries.md](kb/plan-part3-plate-boundaries.md)：第三部分改版計畫、世界交界帶整理表、原型測試紀錄。
-- [kb/maintenance.md](kb/maintenance.md)：環境設定、本機重跑與測試紀錄。
-- [kb/pygmt-colab-example.md](kb/pygmt-colab-example.md)：原始參考 Notebook 的重點筆記。
-
-`scripts/` 有本機重跑與清除圖片的工具，以及第三部分的原型腳本（`prototype_*.py`）。
