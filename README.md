@@ -8,11 +8,11 @@
 
 **[先看課程介紹與 Gallery →](intro.md)**
 
-三份 Notebook 各自包含環境設置，可獨立開始：
+前兩份是 Colab Notebook，各自包含環境設置，可獨立開始；第三份是說明文件加範例程式，執行環境自己準備：
 
 - [01｜基本地圖與地震](https://colab.research.google.com/github/jimmy60504/pygmt-map-lab/blob/main/01_maps_earthquakes.ipynb)
 - [02｜地形與 3D](https://colab.research.google.com/github/jimmy60504/pygmt-map-lab/blob/main/02_terrain_3d.ipynb)
-- [03｜AI 探索與作業：畫世界的板塊交界帶](https://colab.research.google.com/github/jimmy60504/pygmt-map-lab/blob/main/03_ai_exploration.ipynb)
+- [03｜AI 探索與作業：畫世界的板塊交界帶](03_ai_exploration.md)（說明與範例圖，程式在 [examples/](examples/)）
 
 先在 GitHub 閱讀 GMT、PyGMT 與資料來源介紹，再到 Colab 跟著範例程式與練習操作。
 
@@ -24,7 +24,7 @@
 
 ## 這堂課會做什麼？
 
-前兩份 Notebook 用台灣建立「一張圖是一連串選擇的結果」；第三份把同一套方法搬到世界，「AI 負責實作，判讀與證據由自己負責」。
+前兩份 Notebook 用台灣建立「一張圖是一連串選擇的結果」；第三份把同一套方法搬到世界，「AI 負責實作，判讀與證據由自己負責」。第三份不是 Notebook，是一份說明加六支範例程式，學生把範例交給 AI 改，執行環境自己準備（本機或 Colab 都可）。
 
 **課前導讀（[intro.md](intro.md)）**
 
@@ -47,13 +47,12 @@
 - 3D 視角：方位角、仰角與垂直誇大對地形判讀的影響。
 - 拉桿用於連續比較視角，作為 AI 輔助的前導。
 
-**03｜AI 探索與作業：畫世界的板塊交界帶**
+**03｜AI 探索與作業：畫世界的板塊交界帶（[03_ai_exploration.md](03_ai_exploration.md)）**
 
 - 三大類交界帶（張裂、聚合、轉形）在地形與地震上的訊號：海溝、洋脊、裂谷、線狀錯動；地震深度三段分級（0–70、70–300、300–700 km），有中深震幾乎就是隱沒帶。分類沿用 Lillie (1999)《Whole Earth Geophysics》。
 - 全球總覽：地震、全新世火山與熱點疊在地形上，看出地震帶就是交界帶。
 - 世界交界帶整理表（[plate-boundaries.md](plate-boundaries.md)）：三十多段，附範圍、兩側板塊與「佐證時注意」，學生從中挑一段或自己框。
-- 區域範本：改參數就能換區域，輸出地圖（地形＋地震＋A–B 線＋位置示意）與距離–深度剖面；自動查 USGS 筆數、標 VE、統計多少深度是預設值。
-- 進階：把 EarthScope 的層析模型鋪在剖面底下，看板片與岩石圈。
+- 六張範例圖各配一支程式（`examples/`）：全球總覽、八段交界帶平面圖、區域地圖加 A–B 剖面、速度剖面、3D 海底方塊、火山與熱點。區域範本改參數就能換區域，自動查 USGS 筆數、標 VE、統計多少深度是預設值。
 - AI 工具與圖像檢查表沿用；另加三項：深度分級界線、剖面方向與走廊、預設深度比例。
 - 作業：一段交界帶的地圖與剖面，圖說寫「看到什麼、證據是什麼、哪裡不確定」，使用 PyGMT 並提交 GitHub。
 
@@ -69,7 +68,7 @@ Notebook 會在執行時下載資料並產生圖片，請保持網路連線。
 
 作品請把**圖＋圖說**放在一起，內容三件事：
 
-1. **一段交界帶的地圖與至少一條 A–B 剖面**：地形當底，地震依三段深度上色、大小表規模，有比例尺、圖例與位置示意；剖面深度軸到 700 km，標 VE。可沿用 Notebook 03 的範本改參數，也可請 AI 重寫。
+1. **一段交界帶的地圖與至少一條 A–B 剖面**：地形當底，地震依三段深度上色、大小表規模，有比例尺、圖例與位置示意；剖面深度軸到 700 km，標 VE。可沿用 `examples/` 的範例改參數，也可請 AI 重寫。
 2. **圖說三段**：看到什麼地形與地震分布；符合哪一類交界、圖上哪些特徵是證據；哪些地方不符合或不確定、還缺什麼資料。
 3. **資料註記**：來源、時間範圍、規模門檻、走廊半寬、有多少深度是 USGS 預設值。
 
@@ -87,7 +86,7 @@ Notebook 會在執行時下載資料並產生圖片，請保持網路連線。
 
 ### 這份作業會用到的資料
 
-Notebook 03 的範本已經把前四項接好；後面幾項是佐證用的補充。作品仍需用到 PyGMT，可搭配其他工具。
+`examples/` 的範例已經把前四項接好；後面幾項是佐證用的補充。作品仍需用到 PyGMT，可搭配其他工具。
 
 | 想找什麼 | 資料入口 | 可以做什麼 |
 | --- | --- | --- |
@@ -129,6 +128,7 @@ Notebook 03 的範本已經把前四項接好；後面幾項是佐證用的補�
 ## 補充資料索引
 
 - [intro.md](intro.md)：課前介紹，認識 GMT、PyGMT、官方 Gallery 與地震資料來源。
+- [03_ai_exploration.md](03_ai_exploration.md)：第三部分的說明與範例圖；程式在 [examples/](examples/)。
 - [plate-boundaries.md](plate-boundaries.md)：世界板塊交界帶整理表，第三部分選區域用；附範圍、兩側板塊與佐證提示。
 - [earthquake-figure-guide.md](earthquake-figure-guide.md)：地震學常見圖像，每種圖想回答什麼、怎麼讀，附範例。
 - [figure-examples.md](figure-examples.md)：論文圖收集，漂亮的和普通的放在一起比較。

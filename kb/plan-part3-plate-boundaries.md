@@ -152,6 +152,10 @@
 | `README.md`、`kb/lesson-plan.md`、`kb/teaching-script.md` | 03 摘要與作業段改寫；原資料靈感表格移到進階選項 |
 | `kb/maintenance.md` | 補測試紀錄 |
 
+## 改為說明文件加範例（2026-09-15 定案）
+
+第三部分不再是 Notebook：`03_ai_exploration.md` 放說明與範例圖，`examples/01`–`06` 放程式，學生 fork 後把範例交給 AI 改，執行環境自己準備（本機或 Colab clone）。原因：Colab 每次重裝 GMT 太久、agent 需要的是可讀的範例而非可點的 cell、繳交物本來就是圖與圖說。原型腳本已整理進 `examples/`。
+
 ## 原型測試（2026-09-15）
 
 `scripts/prototype_ridge_block.py`：中大西洋洋脊 22–34°N，USGS 2000 年起 M ≥ 4，地形 02m。做法是只畫切線以北的半塊地形，讓 3D 方塊的南緣就是切面，`plane` 把切面塗灰，再用 `plot3d` 把走廊內的地震投到切面上；下方另配平面圖與 2D 剖面。三個面板都畫得出來，3D 方塊加切面在 PyGMT 可行。

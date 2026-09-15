@@ -2,7 +2,13 @@
 
 本頁供授課者維護與測試教材使用，學生請從 [課程入口](../README.md) 開始。
 
-## 第三部分改版（2026-09-15）
+## 第三部分改為說明文件加範例程式（2026-09-15）
+
+- `03_ai_exploration.ipynb` 已移除，改為 `03_ai_exploration.md`：任務說明、交界帶類型表、六張範例圖與對應程式 `examples/01`–`06`、整理表連結、AI 工具、檢查表、資料表與作業。學生自行準備執行環境（本機 conda 或 Colab clone），不再由 Colab 安裝格綁定。
+- `examples/` 六支程式各自獨立、只需 PyGMT 0.17 及其相依套件，資料執行時從網路抓；本機全部跑通一次，輸出存於 `docs/images/`。速度剖面用 GMT `grdinterpolate -T` 逐層抽取再 `grdtrack` 取樣，不需 netCDF4 或 SciPy。
+- `scripts/prototype_*.py` 已併入 `examples/` 後移除；`scripts/run_notebook.py` 與 `clear_notebook_images.py` 現在只處理 01、02 兩份。
+
+## 第三部分改版（2026-09-15，Notebook 版，已被上一節取代）
 
 - `03_ai_exploration.ipynb` 重組為板塊交界帶任務：交界帶類型表、全球總覽（USGS 地震＋NCEI 火山＋GMT 熱點）、世界交界帶整理表、區域範本（地圖＋A–B 剖面）、進階層析剖面（EarthScope EMC TX2019slab，6.7 MB，執行時下載到工作目錄，已在 `.gitignore` 排除 `*.nc`）、互動 A–B 工具（ipyleaflet）已移除，A、B 改為直接填座標，安裝清單縮回 PyGMT、GMT、Ghostscript、Pandas。
 - 本機以全新 kernel 跑通 03；第一次執行發現第二張 Figure 需重建 CPT，已修正。網路依賴：USGS、NCEI、EarthScope、GMT 資料伺服器。
@@ -28,13 +34,13 @@
 
 ## 本機重跑
 
-Colab 使用 Conda／mamba 安裝。三份環境格會先檢查，套件已可用時跳過安裝。
+Colab 使用 Conda／mamba 安裝。兩份環境格會先檢查，套件已可用時跳過安裝。
 
 各份只明列自己的套件；相依套件由 mamba 自動安裝：
 
 - 基本地圖與地震：PyGMT、GMT、Ghostscript、Pandas。
 - 地形與 3D：PyGMT、GMT、Ghostscript、ipywidgets。
-- AI 探索：PyGMT、GMT、Ghostscript、Pandas。層析剖面用 GMT 自己的 `grdinterpolate` 切片，不需要 netCDF4 或 SciPy；走廊幾何用 NumPy 球面公式，不需要 pyproj。
+- 第三部分範例程式：PyGMT、GMT、Ghostscript、Pandas（層析剖面用 GMT 自己的 `grdinterpolate` 切片，走廊幾何用 NumPy 球面公式）。
 
 環境可用性檢查也依各份需求執行，不會因其他篇章的套件未安裝而重跑安裝。此調整未在 Colab 重新計時；PyGMT／GMT 自身的相依套件仍會下載。
 
@@ -44,11 +50,11 @@ conda activate pygmt-workshop
 python scripts/run_notebook.py
 ```
 
-執行器依序以各自全新的 kernel 跑三份 Notebook，結果只保留在記憶體，不修改教材、不新增執行版。也可指定單份，例如 `python scripts/run_notebook.py 02_terrain_3d.ipynb`。旋轉拉桿僅執行初始畫面。本機環境 `.conda-env/` 已由 `.gitignore` 排除。
+執行器依序以各自全新的 kernel 跑兩份 Notebook，結果只保留在記憶體，不修改教材、不新增執行版。也可指定單份，例如 `python scripts/run_notebook.py 02_terrain_3d.ipynb`。旋轉拉桿僅執行初始畫面。本機環境 `.conda-env/` 已由 `.gitignore` 排除。
 
 其他維護工具（在專案根目錄執行）：
 
-- `python scripts/clear_notebook_images.py`：清除三份 Notebook 的嵌入圖片與圖片輸出；重跑教材後、上傳 Colab 前可使用。
+- `python scripts/clear_notebook_images.py`：清除兩份 Notebook 的嵌入圖片與圖片輸出；重跑教材後、上傳 Colab 前可使用。
 
 課前介紹與 Gallery 在根目錄 `intro.md` 維護；Notebook 保留實作說明與程式。
 
@@ -59,9 +65,10 @@ python scripts/run_notebook.py
 - `intro.md`：GitHub 上的課前介紹與 Gallery，圖片引用官方網址。
 - `01_maps_earthquakes.ipynb`：基本地圖與地震。
 - `02_terrain_3d.ipynb`：地形、陰影、等高線、3D 與 AI 拉桿前導。
-- `03_ai_exploration.ipynb`：板塊交界帶任務：類型表、全球總覽、整理表、區域範本、層析剖面與作業。
-- 三份都包含環境設置與快捷鍵；不共用執行狀態。舊整份與 executed 副本已移除，可由 Git 歷史還原。
-- `scripts/`：執行與清除圖片的維護工具；`prototype_*.py` 為第三部分原型腳本。
+- `03_ai_exploration.md`：板塊交界帶任務的說明與範例圖；程式在 `examples/`，圖在 `docs/images/`。
+- 兩份 Notebook 都包含環境設置與快捷鍵；不共用執行狀態。舊整份與 executed 副本已移除，可由 Git 歷史還原。
+- `scripts/`：執行與清除 Notebook 圖片的維護工具。
+- `examples/`：第三部分的六支範例程式，一支一張圖。
 - 圖片直接顯示在 Notebook，不另存 PNG；旋轉地形使用拉桿，不再產生 GIF。地震資料直接由 USGS 查詢網址讀取，不再建立本機快取或查詢 JSON。
 
 GitHub 為教材主版本；更新後需從課程連結重新開啟，已另存的學生副本不會自動更新。
