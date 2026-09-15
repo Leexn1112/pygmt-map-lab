@@ -2,9 +2,9 @@
 
 [回課程首頁](README.md) · [Notebook 03](https://colab.research.google.com/github/jimmy60504/pygmt-map-lab/blob/main/03_ai_exploration.ipynb)
 
-![主要板塊與運動方向](https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Bankuai.png/1920px-Bankuai.png)
+![主要板塊與運動方向](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Plates_tect2_en.svg/1920px-Plates_tect2_en.svg.png)
 
-*十五大板塊與運動方向（中文標示）。Qingdou 繪、高柏瑋修改，[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Bankuai.png)，CC BY-SA 4.0。*
+*十五大板塊與運動方向。USGS 繪製，[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Plates_tect2_en.svg)，公有領域。*
 
 範圍為西、東、南、北（度）。板塊名沿用 Lillie 的板塊圖，「今」表示現代模型改歸的微板塊；箭頭指隱沒方向。「佐證時注意」是預期會看到、或容易困惑的地方。也可以自己框，不限於這張表。
 

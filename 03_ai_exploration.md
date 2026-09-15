@@ -46,9 +46,9 @@
 
 主要板塊先看這張：
 
-![主要板塊與運動方向](https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Bankuai.png/1920px-Bankuai.png)
+![主要板塊與運動方向](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Plates_tect2_en.svg/1920px-Plates_tect2_en.svg.png)
 
-*十五大板塊與運動方向（中文標示）。Qingdou 繪、高柏瑋修改，[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Bankuai.png)，CC BY-SA 4.0。*
+*十五大板塊與運動方向。USGS 繪製，[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Plates_tect2_en.svg)，公有領域。*
 
 再看 USGS 的掛圖 [This Dynamic Planet（2006，正面）](https://pubs.usgs.gov/imap/2800/TDPfront-screen.pdf)，板塊、火山、地震與撞擊坑都在同一張圖上，公有領域。課本的板塊圖有版權，不放這裡。
 
