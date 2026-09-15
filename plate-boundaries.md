@@ -6,6 +6,12 @@
 
 *十五大板塊與運動方向。USGS 繪製，[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Plates_tect2_en.svg)，公有領域。*
 
+細一點的版本，邊界依 Bird (2003) 模型，微板塊、邊界類型與運動方向都畫出來：
+
+![板塊邊界細圖](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Tectonic_plates_boundaries_detailed-en.svg/1920px-Tectonic_plates_boundaries_detailed-en.svg.png)
+
+*板塊邊界細圖。Eric Gaba（Sting）繪，資料依 Peter Bird 的板塊模型，[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Tectonic_plates_boundaries_detailed-en.svg)，CC BY-SA 2.5。*
+
 範圍為西、東、南、北（度）。板塊名沿用 Lillie 的板塊圖，「今」表示現代模型改歸的微板塊；箭頭指隱沒方向。「佐證時注意」是預期會看到、或容易困惑的地方。也可以自己框，不限於這張表。
 
 ## 隱沒帶

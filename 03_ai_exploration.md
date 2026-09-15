@@ -50,6 +50,12 @@
 
 *十五大板塊與運動方向。USGS 繪製，[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Plates_tect2_en.svg)，公有領域。*
 
+細一點的版本，邊界依 Bird (2003) 模型，微板塊、邊界類型與運動方向都畫出來：
+
+![板塊邊界細圖](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Tectonic_plates_boundaries_detailed-en.svg/1920px-Tectonic_plates_boundaries_detailed-en.svg.png)
+
+*板塊邊界細圖。Eric Gaba（Sting）繪，資料依 Peter Bird 的板塊模型，[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Tectonic_plates_boundaries_detailed-en.svg)，CC BY-SA 2.5。*
+
 再看 USGS 的掛圖 [This Dynamic Planet（2006，正面）](https://pubs.usgs.gov/imap/2800/TDPfront-screen.pdf)，板塊、火山、地震與撞擊坑都在同一張圖上，公有領域。課本的板塊圖有版權，不放這裡。
 
 ## 範例圖：從全球看到一段剖面
