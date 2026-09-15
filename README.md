@@ -1,8 +1,8 @@
 # PyGMT Map Lab｜地圖實作教室
 
-從一張台灣地圖開始，探索地震、山脈與海底地形，再把視角轉向世界。
+從一張台灣地圖開始，探索地震、山脈與海底地形，再把視角轉向世界的板塊交界帶。
 
-這堂課使用 PyGMT，帶你從現成範例修改出自己的地圖。先認識繪圖的基本設定，再嘗試用 AI 協助修改與除錯，將想法做成作品。
+這堂課使用 PyGMT，帶你從現成範例修改出自己的地圖。先認識繪圖的基本設定，再用 AI 協助畫出世界上某一段板塊交界帶，從海底地形與地震分布佐證它是哪一類，銜接後面的板塊構造課。
 
 ## 開始上課
 
@@ -12,7 +12,7 @@
 
 - [01｜基本地圖與地震](https://colab.research.google.com/github/jimmy60504/pygmt-map-lab/blob/main/01_maps_earthquakes.ipynb)
 - [02｜地形與 3D](https://colab.research.google.com/github/jimmy60504/pygmt-map-lab/blob/main/02_terrain_3d.ipynb)
-- [03｜AI 探索與作業](https://colab.research.google.com/github/jimmy60504/pygmt-map-lab/blob/main/03_ai_exploration.ipynb)
+- [03｜AI 探索與作業：畫世界的板塊交界帶](https://colab.research.google.com/github/jimmy60504/pygmt-map-lab/blob/main/03_ai_exploration.ipynb)
 
 先在 GitHub 閱讀 GMT、PyGMT 與資料來源介紹，再到 Colab 跟著範例程式與練習操作。
 
@@ -24,7 +24,7 @@
 
 ## 這堂課會做什麼？
 
-前兩份 Notebook 建立「一張圖是一連串選擇的結果」；第三份轉向「先有問題再作圖，AI 負責實作，判讀由自己負責」。
+前兩份 Notebook 用台灣建立「一張圖是一連串選擇的結果」；第三份把同一套方法搬到世界，「AI 負責實作，判讀與證據由自己負責」。
 
 **課前導讀（[intro.md](intro.md)）**
 
@@ -47,34 +47,40 @@
 - 3D 視角：方位角、仰角與垂直誇大對地形判讀的影響。
 - 拉桿用於連續比較視角，作為 AI 輔助的前導。
 
-**03｜AI 探索與作業**
+**03｜AI 探索與作業：畫世界的板塊交界帶**
 
-- 思維轉換：先提出想觀察的問題，再決定資料篩選、排序與圖的形式；結果不符預期亦如實呈現。
-- AI 工具：以 Codex 示範，另列替代工具；使用時提供程式、錯誤訊息與執行環境。
-- 圖像檢查：圖說、座標與單位、比例尺、圖例與色條、垂直誇大倍率、位置示意圖。
-- 論文圖參考：依功能、區辨度、整體版面評估，並作為與 AI 討論的範本。
-- A–B 剖面示範：同一批資料由平面轉為地下剖面。
-- 作業：以一個問題出發，產出圖與圖說，使用 PyGMT 並提交 GitHub。
+- 三大類交界帶（張裂、聚合、轉形）在地形與地震上的訊號：海溝、洋脊、裂谷、線狀錯動；地震深度三段分級（0–70、70–300、300–700 km），有中深震幾乎就是隱沒帶。分類沿用 Lillie (1999)《Whole Earth Geophysics》。
+- 全球總覽：地震、全新世火山與熱點疊在地形上，看出地震帶就是交界帶。
+- 世界交界帶整理表（[plate-boundaries.md](plate-boundaries.md)）：三十多段，附範圍、兩側板塊與「佐證時注意」，學生從中挑一段或自己框。
+- 區域範本：改參數就能換區域，輸出地圖（地形＋地震＋A–B 線＋位置示意）與距離–深度剖面；自動查 USGS 筆數、標 VE、統計多少深度是預設值。
+- 進階：把 EarthScope 的層析模型鋪在剖面底下，看板片與岩石圈。
+- AI 工具與圖像檢查表沿用；另加三項：深度分級界線、剖面方向與走廊、預設深度比例。
+- 作業：一段交界帶的地圖與剖面，圖說寫「看到什麼、證據是什麼、哪裡不確定」，使用 PyGMT 並提交 GitHub。
 
 ## 資料從哪裡來？
 
-地震實作主要使用 [USGS 地震目錄](https://earthquake.usgs.gov/fdsnws/event/1/)，並介紹 [台灣 GDMS](https://gdms.cwa.gov.tw/) 這個在地資料管道。地形則透過 PyGMT 取得 [GMT 全球地形資料](https://docs.generic-mapping-tools.org/latest/datasets/remote-data.html)。
+地震主要使用 [USGS 地震目錄](https://earthquake.usgs.gov/fdsnws/event/1/)，並介紹 [台灣 GDMS](https://gdms.cwa.gov.tw/) 這個在地資料管道。地形透過 PyGMT 取得 [GMT 全球地形資料](https://docs.generic-mapping-tools.org/latest/datasets/remote-data.html)。第三份另外用到 [NOAA NCEI 火山位置](https://www.ngdc.noaa.gov/hazel/view/hazards/volcano/loc-search)、GMT 內建熱點範例，以及 [EarthScope EMC](http://ds.iris.edu/ds/products/emc/) 的層析模型；完整清單見下方作業段落。
 
 Notebook 會在執行時下載資料並產生圖片，請保持網路連線。
 
 ## 隔週繳交作品
 
-這次作業就用 AI 做！想想你想呈現什麼，讓 AI 幫你把點子做出來。還沒靈感的話，可以先逛逛 [PyGMT Gallery](https://www.pygmt.org/v0.17.0/gallery/index.html)，找喜歡的範例，再試著改造或組合。
+作業就用 AI 做：選一段世界的板塊交界帶，畫圖、切剖面、寫證據。事先知道答案沒關係，重點是圖上拿得出證據。
 
-作品請把**圖＋一小段圖說**放在一起：說明你想看什麼、如何呈現，以及實際觀察到什麼。不必創新或複雜，也不必得到符合原先猜想的結果；重點是讓人一眼抓到你想表達的事。可以搭配其他工具，不必只用 PyGMT。
+作品請把**圖＋圖說**放在一起，內容三件事：
+
+1. **一段交界帶的地圖與至少一條 A–B 剖面**：地形當底，地震依三段深度上色、大小表規模，有比例尺、圖例與位置示意；剖面深度軸到 700 km，標 VE。可沿用 Notebook 03 的範本改參數，也可請 AI 重寫。
+2. **圖說三段**：看到什麼地形與地震分布；符合哪一類交界、圖上哪些特徵是證據；哪些地方不符合或不確定、還缺什麼資料。
+3. **資料註記**：來源、時間範圍、規模門檻、走廊半寬、有多少深度是 USGS 預設值。
+
+加分（自由）：再畫一段不同類型做對照；加上火山、熱點、速度剖面或震源機制當佐證；畫多條剖面看沿走向的變化。
 
 作業只需滿足兩個條件：
 
 1. **作品與 PyGMT 有關。**
 2. **將作品上傳 GitHub，繳交 repository 連結**，並確認教師能開啟。
 
-題材、區域、呈現形式與圖的張數都可自由發揮，不限定沿用課堂範例；隔週繳交即可。
-
+判斷對錯不是主要分數；圖是否完整可讀、推論是否有圖上證據、有沒有誠實寫出不確定，才是。隔週繳交即可，答案下堂課對照板塊邊界模型一起揭曉。
 
 ### 先逛逛論文的圖，找找靈感
 
@@ -94,40 +100,47 @@ Notebook 會在執行時下載資料並產生圖片，請保持網路連線。
 
 把原論文連結與圖號留給自己，也可以給 AI 當討論參考。圖片搜尋只是入口，仍要回原文確認圖說；若要把原圖放進公開 GitHub，需確認授權並標明來源。
 
-### 資料也可以換，找找新的靈感
+### 這份作業會用到的資料
 
-地震資料不只有 USGS；先想清楚要的是「地震發生在哪裡」的目錄，還是「測站記錄到怎麼搖」的波形。
+Notebook 03 的範本已經把前四項接好；後面幾項是佐證用的補充。作品仍需用到 PyGMT，可搭配其他工具。
 
 | 想找什麼 | 資料入口 | 可以做什麼 |
 | --- | --- | --- |
-| 台灣更細的地震資料 | [氣象署 GDMS](https://gdms.cwa.gov.tw/) | 查找台灣地震目錄與波形；想研究小地震或局部構造，可以從這裡找起，下載方式與權限依網站說明。 |
-| 全球地震目錄 | [USGS](https://earthquake.usgs.gov/fdsnws/event/1/)／[ISC Bulletin](https://www.isc.ac.uk/iscbulletin/search/) | 取得時間、位置、深度與規模，畫分布圖或剖面；各目錄的收錄範圍與更新速度不同。 |
-| 全球測站的地震波形 | [EarthScope（原 IRIS 服務）](https://service.earthscope.org/fdsnws/dataselect/1/) | 按測站、通道與時間下載波形，試做「震央與測站地圖＋波形」；不是每個測站都有所有時段的資料。 |
+| 全球地震目錄 | [USGS](https://earthquake.usgs.gov/fdsnws/event/1/)／[ISC Bulletin](https://www.isc.ac.uk/iscbulletin/search/) | 位置、深度、規模；USGS 單次上限 20,000 筆，ISC 整合各國網、小地震較全 |
+| 台灣更細的地震 | [氣象署 GDMS](https://gdms.cwa.gov.tw/) | 想把台灣當對照組時用 |
+| 海陸地形 | [GMT 全球地形](https://docs.generic-mapping-tools.org/latest/datasets/remote-data.html)／[GEBCO](https://www.gebco.net/data-products/gridded-bathymetry-data) | 海溝、洋脊、裂谷、斷裂帶；大框用 05m，細看用 01m 或 15s |
+| 火山 | [NOAA NCEI 火山位置](https://www.ngdc.noaa.gov/hazel/view/hazards/volcano/loc-search)／[Smithsonian GVP](https://volcano.si.edu/) | 火山鏈平行海溝是隱沒帶、沿裂谷是張裂、轉形帶沒有 |
+| 熱點 | GMT `@hotspots.txt`（Müller et al. 1993） | 板塊內部的火山，當「不是交界」的對照 |
+| 板塊邊界線 | [Bird (2003) PB2002](http://peterbird.name/publications/2003_pb2002/2003_pb2002.htm)（[GeoJSON](https://github.com/fraxen/tectonicplates)）／[Hasterok et al. (2022)](https://github.com/dhasterok/global_tectonics) | 判讀完再疊上去對答案；PB2002 每段有類型碼 |
+| 板塊掛圖 | [USGS This Dynamic Planet (2006)](https://pubs.usgs.gov/imap/2800) | 公有領域，板塊、火山、地震同一張圖 |
+| 板片深度 | [Slab2（USGS）](https://www.sciencebase.gov/catalog/item/5aa1b00ee4b0b1c392e86467) | 隱沒帶的板片幾何，可疊在剖面上檢查傾斜帶 |
+| 速度構造 | [EarthScope EMC](http://ds.iris.edu/ds/products/emc/) | 層析模型的剖面，看板片與岩石圈；也有線上剖面工具 |
+| 震源機制 | [Global CMT](https://www.globalcmt.org/CMTfiles.html) | 逆衝、正斷層、走滑各對應聚合、張裂、轉形；用 `fig.meca()` 畫 |
 
-波形不是地震目錄，不能直接套進本課的地震點位程式。可以請 AI 協助讀取、處理，再用 PyGMT 呈現；例如畫出同一場地震在不同測站的記錄。以上只是靈感，不是額外作業要求。
-
-### 不只地震：把不同資料放在一起看
-
-也可以加入地形、雨量、人口或土地覆蓋，探索一個簡單的小問題。以下是資料入口與發想，不是指定題目：
-
-| 範圍 | 資料入口 | 可以想想的問題 |
-| --- | --- | --- |
-| 台灣 | [20 公尺數值地形模型](https://data.gov.tw/dataset/35430) | 換成較細的地形，能看出哪些山谷、盆地或地形邊界？ |
-| 台灣 | [氣象署開放資料](https://opendata.cwa.gov.tw/index)：雨量與氣象觀測 | 同一場降雨，山區和平地的分布有何不同？ |
-| 全球 | [GEBCO 海陸地形](https://www.gebco.net/data-products/gridded-bathymetry-data) | 海溝的位置與不同深度的地震如何對應？ |
-| 全球 | [Global CMT 震源機制目錄](https://www.globalcmt.org/CMTfiles.html) | 不同區域的地震，斷層運動型態是否不同？ |
-| 全球 | [WorldPop 人口網格](https://www.worldpop.org/) | 地震周邊的人口集中在哪裡？空間分布不等於災害風險。 |
-| 全球 | [Copernicus 土地覆蓋](https://land.copernicus.eu/en/products/global-dynamic-land-cover/land-cover-2020-raster-10-m-global-annual) | 山地與平原的森林、農地、建成區分布有何差異？ |
-| 全球 | [Natural Earth 基礎圖資](https://www.naturalearthdata.com/downloads/) | 加上國界、城市與河流，能否讓研究區域更容易理解？適合區域或全球圖，不是精細街道圖。 |
-
-可以從「地震＋海底地形」、「地震＋震源機制」或「地形＋雨量」選一個方向。先選小區域、少量資料，把一個問題講清楚即可；不必把所有資料都放上圖。
-
-下載前請 AI 一起檢查年份、座標系統、解析度、單位與授權；部分服務可能需要註冊或 API 金鑰。公開資料不代表格式能直接混用，資料疊在一起也不代表已證明因果關係。作品仍需用到 PyGMT，但可以搭配其他工具處理與呈現。
+下載前請 AI 一起檢查年份、座標系統、單位與授權。深度、規模的定義各目錄不同，不要混用；資料疊在一起不代表已證明因果。
 
 ## 想再多探索？
 
 - [PyGMT Gallery](https://www.pygmt.org/v0.17.0/gallery/index.html)：從範例找靈感。
+- [PyGMT Tutorials](https://www.pygmt.org/v0.17.0/tutorials/index.html)：官方教學，Basics 涵蓋範圍設定、海岸線、框線、點線面與文字；Advanced 有等高線、3D 透視、地形疊圖、圖例、子圖與 inset，可對照課堂內容延伸。
 - [PyGMT 文件](https://www.pygmt.org/v0.17.0/)：查閱函式與參數。
 - [GMT 官方網站](https://www.generic-mapping-tools.org/)：認識背後的繪圖工具。
 
-授課者使用的環境設定與測試紀錄，另見 [教材維護說明](docs/maintenance.md)。
+## 補充資料索引
+
+給學生看的：
+
+- [intro.md](intro.md)：課前介紹，認識 GMT、PyGMT、官方 Gallery 與地震資料來源。
+- [plate-boundaries.md](plate-boundaries.md)：世界板塊交界帶整理表，第三部分選區域用；附範圍、兩側板塊與佐證提示。
+- [earthquake-figure-guide.md](earthquake-figure-guide.md)：地震學常見圖像，每種圖想回答什麼、怎麼讀，附範例。
+- [figure-examples.md](figure-examples.md)：論文圖收集，漂亮的和普通的放在一起比較。
+
+給授課者看的（`kb/`）：
+
+- [kb/lesson-plan.md](kb/lesson-plan.md)：課程教案。
+- [kb/teaching-script.md](kb/teaching-script.md)：教學腳本。
+- [kb/plan-part3-plate-boundaries.md](kb/plan-part3-plate-boundaries.md)：第三部分改版計畫、世界交界帶整理表、原型測試紀錄。
+- [kb/maintenance.md](kb/maintenance.md)：環境設定、本機重跑與測試紀錄。
+- [kb/pygmt-colab-example.md](kb/pygmt-colab-example.md)：原始參考 Notebook 的重點筆記。
+
+`scripts/` 有本機重跑與清除圖片的工具，以及第三部分的原型腳本（`prototype_*.py`）。

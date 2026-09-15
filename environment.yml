@@ -14,3 +14,7 @@ dependencies:
   - ipywidgets
   - ipyleaflet
   - pyproj
+  - xarray
+  - netcdf4
+  - scipy
+  - requests

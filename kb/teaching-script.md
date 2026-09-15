@@ -1,5 +1,7 @@
 # 北市大 PyGMT 教案草稿
 
+> **2026-09-15 更新**：第三部分（AI 探索與作業）已改為「畫世界的板塊交界帶」：課堂講三大類交界帶的地形與地震訊號，學生用 AI 以 PyGMT 畫一段交界帶的地圖與 A–B 剖面，從證據說明類型，銜接板塊構造課。以下 AI 探索與作業段落為舊版，新版內容以 [plan-part3-plate-boundaries.md](plan-part3-plate-boundaries.md)、README 與 Notebook 03 為準。
+
 先整理要講的主題與練習，三節課的時間分配之後再安排。
 
 ## 課程設定
@@ -137,7 +139,7 @@
 ## 參考資料
 
 - [原始 Notebook](https://github.com/oceanicdayi/plot_plate_boundary_pygmt/blob/main/pygmt_plot_plate_boundary.ipynb)
-- [範例重點筆記](kb/pygmt-colab-example.md)
+- [範例重點筆記](pygmt-colab-example.md)
 - [USGS 地震目錄](https://earthquake.usgs.gov/fdsnws/event/1/)
 - [PyGMT 地形資料](https://www.pygmt.org/latest/api/generated/pygmt.datasets.load_earth_relief.html)
 - [PyGMT 3D 地形](https://www.pygmt.org/latest/api/generated/pygmt.Figure.grdview.html)

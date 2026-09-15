@@ -1,5 +1,7 @@
 # 北市大 PyGMT 課程教案（初稿）
 
+> **2026-09-15 更新**：第三部分（AI 探索與作業）已改為「畫世界的板塊交界帶」：課堂講三大類交界帶的地形與地震訊號，學生用 AI 以 PyGMT 畫一段交界帶的地圖與 A–B 剖面，從證據說明類型，銜接板塊構造課。以下 AI 探索與作業段落為舊版，新版內容以 [plan-part3-plate-boundaries.md](plan-part3-plate-boundaries.md)、README 與 Notebook 03 為準。
+
 ## 課程概況
 
 - 課程長度：三節課

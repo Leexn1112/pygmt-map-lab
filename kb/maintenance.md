@@ -2,6 +2,13 @@
 
 本頁供授課者維護與測試教材使用，學生請從 [課程入口](../README.md) 開始。
 
+## 第三部分改版（2026-09-15）
+
+- `03_ai_exploration.ipynb` 重組為板塊交界帶任務：交界帶類型表、全球總覽（USGS 地震＋NCEI 火山＋GMT 熱點）、世界交界帶整理表、區域範本（地圖＋A–B 剖面）、進階層析剖面（EarthScope EMC TX2019slab，6.7 MB，執行時下載到工作目錄，已在 `.gitignore` 排除 `*.nc`）、互動 A–B 工具改為選用並參數化。
+- 本機以全新 kernel 跑通 03；第一次執行發現第二張 Figure 需重建 CPT，已修正。網路依賴：USGS、NCEI、EarthScope、GMT 資料伺服器。
+- `environment.yml` 與 Colab 安裝格新增 xarray、netcdf4、scipy；本機 `.conda-env` 當時以 pip 補裝 netCDF4 與 scipy。
+- 原型腳本在 `scripts/prototype_*.py`（洋脊 3D 方塊、八區平面圖、日本／喜馬拉雅剖面、層析剖面、火山與熱點），供備課與範本修改參考，不是教材的一部分。設計與測試紀錄見 [plan-part3-plate-boundaries.md](plan-part3-plate-boundaries.md)。
+
 ## 三份教材拆分檢查（2026-09-12）
 
 - 三份均通過 Notebook 格式、Python 語法與獨立環境設置檢查，教材不保留輸出圖片。
@@ -27,7 +34,7 @@ Colab 使用 Conda／mamba 安裝。三份環境格會先檢查，套件已可�
 
 - 基本地圖與地震：PyGMT、GMT、Ghostscript、Pandas。
 - 地形與 3D：PyGMT、GMT、Ghostscript、ipywidgets。
-- AI 探索：PyGMT、GMT、Ghostscript、Pandas、NumPy、ipywidgets、ipyleaflet、pyproj。
+- AI 探索：PyGMT、GMT、Ghostscript、Pandas、NumPy、ipywidgets、ipyleaflet、pyproj、xarray、netCDF4、SciPy（後三者供層析模型剖面）。
 
 環境可用性檢查也依各份需求執行，不會因其他篇章的套件未安裝而重跑安裝。此調整未在 Colab 重新計時；PyGMT／GMT 自身的相依套件仍會下載。
 
@@ -52,9 +59,9 @@ python scripts/run_notebook.py
 - `intro.md`：GitHub 上的課前介紹與 Gallery，圖片引用官方網址。
 - `01_maps_earthquakes.ipynb`：基本地圖與地震。
 - `02_terrain_3d.ipynb`：地形、陰影、等高線、3D 與 AI 拉桿前導。
-- `03_ai_exploration.ipynb`：AI 引導、資料靈感、A–B 剖面與作業。
+- `03_ai_exploration.ipynb`：板塊交界帶任務：類型表、全球總覽、整理表、區域範本、層析剖面、互動 A–B 工具（選用）與作業。
 - 三份都包含環境設置與快捷鍵；不共用執行狀態。舊整份與 executed 副本已移除，可由 Git 歷史還原。
-- `scripts/`：執行與清除圖片的維護工具。
+- `scripts/`：執行與清除圖片的維護工具；`prototype_*.py` 為第三部分原型腳本。
 - 圖片直接顯示在 Notebook，不另存 PNG；旋轉地形使用拉桿，不再產生 GIF。地震資料直接由 USGS 查詢網址讀取，不再建立本機快取或查詢 JSON。
 
 GitHub 為教材主版本；更新後需從課程連結重新開啟，已另存的學生副本不會自動更新。
