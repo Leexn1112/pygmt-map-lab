@@ -65,7 +65,7 @@ for i, (name, region) in enumerate(REGIONS):
     grid = pygmt.datasets.load_earth_relief(resolution="02m", region=region)
     w, h = panel_size(region)
     col, row = i % cols, i // cols
-    fig.shift_origin(xshift=f"f{1 + col * (MAX_W + 1.5)}c", yshift=f"f{1 + (1 - row) * (MAX_H + 2.5)}c")
+    fig.shift_origin(xshift=f"f{1 + col * (MAX_W + 1.5)}c", yshift=f"f{3 + (1 - row) * (MAX_H + 2.5)}c")
 
     fig.grdimage(grid=grid, region=region, projection=f"M{w}c", cmap="geo", shading="+a-45+nt0.5",
                  frame=[f"WSne+t{name}", "a5f1"])
@@ -83,7 +83,8 @@ for i, (name, region) in enumerate(REGIONS):
                  close=True, pen="1p,red")
     print(name, "M>=", minmag, len(quakes))
 
-fig.shift_origin(xshift="f1c", yshift="f0.2c")
-fig.colorbar(cmap=True, position="x0c/0c+w6c/0.3c+h", frame=["a0", "+lDepth class (km): 0-70 / 70-300 / 300-700"])
+# 共用色條：整張圖正下方置中（4 欄總寬約 38 cm；面板從 y=3c 起，底下留給色條）
+fig.shift_origin(xshift="f0c", yshift="f0c")
+fig.colorbar(cmap=True, position="x15c/1.3c+w8c/0.35c+h", frame=["a0", "+lDepth class (km): 0-70 / 70-300 / 300-700"])
 fig.savefig(OUT, dpi=150)
 print("saved", OUT)
