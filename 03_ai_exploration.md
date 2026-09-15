@@ -44,7 +44,13 @@
 - **深度不一定是量到的**。USGS 對洋脊與某些陸區的地震常直接填 10 km 或 33 km 的預設深度，畫出來會排成一直線。看到整排同深度，先查是不是預設值。
 - **一個框可能同時有兩類**。交界帶會轉彎、分段；框裡看到兩種訊號是正常的，分段說明即可。
 
-課本的板塊圖有版權，這裡用 USGS 公有領域的掛圖代替：[This Dynamic Planet（2006，正面）](https://pubs.usgs.gov/imap/2800/TDPfront-screen.pdf)，板塊、火山、地震與撞擊坑都在同一張圖上。
+主要板塊先看這張：
+
+![主要板塊與運動方向](https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Bankuai.png/1920px-Bankuai.png)
+
+*十五大板塊與運動方向（中文標示）。Qingdou 繪、高柏瑋修改，[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Bankuai.png)，CC BY-SA 4.0。*
+
+再看 USGS 的掛圖 [This Dynamic Planet（2006，正面）](https://pubs.usgs.gov/imap/2800/TDPfront-screen.pdf)，板塊、火山、地震與撞擊坑都在同一張圖上，公有領域。課本的板塊圖有版權，不放這裡。
 
 ## 範例圖：從全球看到一段剖面
 
