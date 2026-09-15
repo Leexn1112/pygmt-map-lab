@@ -58,13 +58,13 @@ fig.plot3d(x=corridor.longitude, y=[CUT_LAT] * len(corridor), z=-corridor.depth,
            perspective=PERSPECTIVE, region=north + [Z_MIN_KM, 0], projection=f"M{WIDTH_CM}c", zsize=f"{ZSIZE_CM}c")
 
 # (b) 小地球儀放在 3D 方塊右邊：紅框是研究區，紅虛線是切線
-fig.shift_origin(xshift="16.5c", yshift="2c")
+fig.shift_origin(xshift="18c", yshift="2.5c")
 lon_c, lat_c = (REGION[0] + REGION[1]) / 2, (REGION[2] + REGION[3]) / 2
 fig.coast(region="g", projection=f"G{lon_c}/{lat_c}/3.5c", land="gray75", water="white", frame="g")
 fig.plot(x=[REGION[0], REGION[1], REGION[1], REGION[0]], y=[REGION[2], REGION[2], REGION[3], REGION[3]],
          close=True, pen="1.2p,red")
 fig.plot(x=[REGION[0], REGION[1]], y=[CUT_LAT, CUT_LAT], pen="0.8p,red,--")
-fig.shift_origin(xshift="-16.5c", yshift="-2c")
+fig.shift_origin(xshift="-18c", yshift="-2.5c")
 
 # (c) 平面圖：切線與走廊
 fig.shift_origin(yshift="-9c")
