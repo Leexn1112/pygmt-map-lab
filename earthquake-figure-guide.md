@@ -4,6 +4,8 @@
 
 核心問題：**這張圖想回答什麼？它用哪些視覺慣例，讓同行讀得懂？**
 
+每節先列圖型，再放幾張範例圖；圖片連自來源網站，出處與授權標在圖下。
+
 ## 一、地震發生在哪裡？
 
 | 常見圖 | 想回答的問題 | 常見畫法與讀圖提醒 |
@@ -13,6 +15,28 @@
 | 測站分布圖（station map） | 哪些測站記錄到事件？觀測覆蓋如何？ | 測站常用三角形並標站碼，主震常用星形；位置分布不等於每站都有完整可用資料。 |
 | 震源剖面（hypocenter cross-section） | 地震在地下如何排列？ | 地圖標 A–B 與取樣寬度，剖面畫沿線距離—深度；深度通常向下增加，需確認垂直誇大倍率。 |
 | 三維地震／地形圖 | 空間分布從不同角度看有何不同？ | 透視、旋轉與深度軸能幫助理解，但會有遮蔽；重要結論仍適合搭配平面圖或剖面。 |
+
+**範例圖**
+
+![地震分布圖：義大利歷史地震目錄](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41597-026-07523-6/MediaObjects/41597_2026_7523_Fig1_HTML.png)
+
+*地震分布圖。[Scientific Data (2026) Fig. 1](https://www.nature.com/articles/s41597-026-07523-6/figures/1)，CC BY 4.0。點依規模上色、大小一致；問學生：大地震在哪裡？*
+
+![區域構造圖：孟加拉扇](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs43247-026-04037-2/MediaObjects/43247_2026_4037_Fig1_HTML.png)
+
+*區域構造／研究區域圖，A 框出 B、B 框出 C 的層層縮放。[Communications Earth & Environment (2026) Fig. 1](https://www.nature.com/articles/s43247-026-04037-2/figures/1)，CC BY 4.0。*
+
+![測站分布圖：埃及東北部](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41598-026-51640-6/MediaObjects/41598_2026_51640_Fig1_HTML.png)
+
+*測站分布圖（B：紅色三角形測站與站碼、黑色三角形參考站、斷層線）。[Scientific Reports (2026) Fig. 1](https://www.nature.com/articles/s41598-026-51640-6/figures/1)，CC BY-NC-ND 4.0，未修改。*
+
+![震源剖面：厄瓜多 Esmeraldas](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41586-024-07245-y/MediaObjects/41586_2024_7245_Fig1_HTML.png)
+
+*震源剖面。地圖標 A–A′ 到 D–D′，剖面畫沿線距離—深度並疊上板塊模型線；圖說交代剖面寬 5 km、方位 108°。[Nature (2024) Fig. 1](https://www.nature.com/articles/s41586-024-07245-y/figures/1)，CC BY 4.0。*
+
+![三維地形圖：台灣](submission_assets/outputs/04_taiwan_3d.png)
+
+*三維地形圖，本課 02 Notebook 的輸出。地震點也可以用 [PyGMT 3-D scatter](https://www.pygmt.org/v0.17.0/gallery/3d_plots/scatter3d.html) 放進透視圖。*
 
 可從 [USGS 地震地圖](https://earthquake.usgs.gov/earthquakes/map/) 看事件分布；[USGS 公開產品說明](https://earthquake.usgs.gov/data/ground-failure/background.php) 有明確的星形震央、三角形測站與斷層範圍圖例，可作為「符號是一種社群語言」的實例。
 
@@ -27,6 +51,28 @@
 | 震源機制解（focal mechanism／beachball） | 震源的斷層運動型態是什麼？ | 黑白或雙色沙灘球表現機制，不是普通圓餅圖；對雙力偶機制，兩個節面不代表已知道哪個是真正斷層面。 |
 | 有限斷層／滑移分布圖（finite-fault slip） | 斷層哪裡滑得多？破裂如何展開？ | 用顏色表示滑移量，可能疊加破裂時間等值線；這是模型推估，不是直接拍到的地下影像。 |
 
+**範例圖**
+
+![時間—距離、時間—規模與累積曲線：聖托里尼群震](https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs41586-025-09525-7/MediaObjects/41586_2025_9525_Fig2_HTML.png)
+
+*一張圖包了三種：a 是時間—距離圖（依深度上色，右軸累積地震矩），b 是時間—規模圖（右軸累積位移），c 把機制解排在時間軸上，d 是時頻圖。[Nature (2025) Fig. 2](https://www.nature.com/articles/s41586-025-09525-7/figures/2)，CC BY 4.0。*
+
+![每年事件數：美國中部 M3+ 地震](https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Cumulative_induced_seismicity.png/960px-Cumulative_induced_seismicity.png)
+
+*事件數圖，每年 M3+ 地震數的柱狀圖，附分布圖。[USGS，Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Cumulative_induced_seismicity.png)，公有領域。*
+
+![規模—頻率分布：2016 義大利中部地震序列](https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Gutenberg%E2%80%93Richter_law_in_the_2016_Central_Italy_earthquake_%28magnitude%29.png/960px-Gutenberg%E2%80%93Richter_law_in_the_2016_Central_Italy_earthquake_%28magnitude%29.png)
+
+*Gutenberg–Richter 圖。上：規模與對數累積事件數，小規模端偏離直線就是目錄不完整；下：分箱數量。[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Gutenberg%E2%80%93Richter_law_in_the_2016_Central_Italy_earthquake_(magnitude).png)，CC BY-SA 4.0。*
+
+![震源機制解：PyGMT meca 範例](https://www.pygmt.org/v0.17.0/_images/sphx_glr_meca_001.png)
+
+*震源機制解（沙灘球）。[PyGMT gallery：Focal mechanisms](https://www.pygmt.org/v0.17.0/gallery/seismology/meca.html)，BSD-3。多個機制解排在地圖上的做法，見上面 Esmeraldas 那張。*
+
+![有限斷層滑移分布：2025 菲律賓 Davao M7.4](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Davao_earthquake_M7.4_finite_fault.png/960px-Davao_earthquake_M7.4_finite_fault.png)
+
+*有限斷層滑移分布。顏色是滑移量、箭頭是滑移方向、虛線是每 10 秒的破裂前緣；座標是沿走向與沿傾向距離。[USGS，Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Davao_earthquake_M7.4_finite_fault.png)，公有領域。*
+
 範例入口：[規模—頻率研究報告](https://pubs.usgs.gov/of/2013/1165/pdf/ofr2013-1165_appendixL.pdf)、[PyGMT 機制解範例](https://www.pygmt.org/v0.16.0/gallery/seismology/meca.html)、[USGS 有限斷層產品](https://earthquake.usgs.gov/data/finitefault/)。機制解範例連結為 0.16 版，這裡用來看圖，不作為課堂版本設定。
 
 ## 三、測站記錄到什麼？
@@ -38,6 +84,24 @@
 | 走時曲線（travel-time curve） | 不同震相何時到達？ | 距離—到時關係，可比較理論曲線與觀測拾取點；區分發震時間基準與對齊某個震相的時間。 |
 | 頻譜／時頻圖（spectrum／spectrogram） | 訊號有哪些頻率？頻率如何隨時間變化？ | 頻譜畫頻率—振幅或功率；時頻圖用顏色表示強度。要交代頻率單位、對數尺度、色階與處理方式。 |
 
+**範例圖**
+
+![地震波形：2023 土耳其 M7.5，安卡拉測站](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Turkey_magnitude_7.5_earthquake_%2812-24_PM%2C_6_February_2023%29.png/960px-Turkey_magnitude_7.5_earthquake_%2812-24_PM%2C_6_February_2023%29.png)
+
+*單站波形。標題寫了網路、測站、通道（IU.ANTO.00.BHZ）與取樣率；縱軸是 counts，不是地動速度。[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Turkey_magnitude_7.5_earthquake_(12-24_PM,_6_February_2023).png)，CC BY 2.0。*
+
+![多測站波形排列：ObsPy record section](https://docs.obspy.org/_images/waveform_plotting_tutorial_6_00_00.png)
+
+*多測站波形排列。橫軸震央距、縱軸時間，到時隨距離變晚。[ObsPy 波形繪圖教學](https://docs.obspy.org/tutorial/code_snippets/waveform_plotting_tutorial.html)。*
+
+![走時曲線：IASP91](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Time-distance_curve.png/960px-Time-distance_curve.png)
+
+*走時曲線。橫軸震央距（度）、縱軸時間，各震相一條線，紅色是高頻常觀測到的相。[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Time-distance_curve.png)，CC0。*
+
+![波形、時頻圖與頻譜：黃石 Steamboat 間歇泉噴發](https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/23eruption.png/960px-23eruption.png)
+
+*同一段訊號的三種看法：上是波形，中是時頻圖（顏色為強度），下是頻譜。[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:23eruption.png)，CC BY-SA 4.0。時頻圖用的彩虹色階正好可以拿來討論。*
+
 看圖入口：[IRIS／EarthScope 波形觀看資源](https://www.iris.edu/hq/programs/epo/resources_for_viewing_seismograms)、[多測站 Event Plots](https://ds.iris.edu/dms/products/eventplot/)、[SeisSound 時頻與聲音展示](https://ds.iris.edu/dms/products/seissound/)。這類圖需要波形資料，不是下載地震目錄就能畫。
 
 ## 四、地表搖多大？地下長什麼樣？
@@ -46,6 +110,16 @@
 | --- | --- | --- |
 | 震度／地動分布圖（ShakeMap） | 各地受到多強的搖晃？ | 色塊或等值線表示震度、PGA、PGV 等；這些量不能混用，規模也不是地圖上各地的震度。 |
 | 地下速度構造圖（tomography） | 地震波在哪些區域較快或較慢？ | 水平切片或剖面以顏色表示速度或相對異常；必須看參考模型、單位與解析能力，紅藍沒有跨所有論文通用的意義。 |
+
+**範例圖**
+
+![ShakeMap：2015 哥倫比亞 M6.2](https://upload.wikimedia.org/wikipedia/commons/7/71/USGS_ShakeMap_Aratoca_Santander_Colombia_Earthquake_2015.jpg)
+
+*ShakeMap 震度分布圖。色階同時對應震度、PGA 與 PGV，圖下表格是換算關係；深度 155 km 的地震，震度分布很寬。[USGS，Wikimedia Commons](https://commons.wikimedia.org/wiki/File:USGS_ShakeMap_Aratoca_Santander_Colombia_Earthquake_2015.jpg)，公有領域。*
+
+![地下速度構造：北美地函 Farallon 板塊](https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/FarallonTomoSlice.png/960px-FarallonTomoSlice.png)
+
+*層析成像剖面的簡化圖。顏色是相對參考模型的快慢，附剖面位置圖。[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:FarallonTomoSlice.png)，CC BY-SA 4.0。*
 
 參考：[USGS 規模與震度說明](https://www.usgs.gov/programs/earthquake-hazards/earthquake-magnitude-energy-release-and-shaking-intensity)、[ShakeMap 讀圖說明](https://escweb.wr.usgs.gov/share/shake2/haywired/about.html)、[EarthScope 地震層析成像介紹](https://www.earthscope.org/what-is/seismology/seismic-tomography/)。
 
@@ -94,4 +168,4 @@
 
 每張圖固定問三件事：「它想回答什麼？」「我靠什麼符號看懂？」「哪些資訊不能靠猜？」再接到 GMT／PyGMT 的圖層與參數。
 
-選論文圖時保留作者、年份、圖號與來源連結；若要把原圖放進公開教材，先確認授權。這份筆記先提供圖種與官方範例入口，尚未挑定課堂要使用的論文圖，也未嵌入圖片。
+選論文圖時保留作者、年份、圖號與來源連結；若要把原圖放進公開教材，先確認授權。各節的範例圖直接連到來源網站顯示，出處與授權標在圖下。漂亮與普通的論文圖對照，另見 [論文圖收集](figure-examples.md)。
