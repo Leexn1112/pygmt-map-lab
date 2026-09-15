@@ -34,7 +34,7 @@
 
 *震源剖面。地圖標 A–A′ 到 D–D′，剖面畫沿線距離—深度並疊上板塊模型線；圖說交代剖面寬 5 km、方位 108°。[Nature (2024) Fig. 1](https://www.nature.com/articles/s41586-024-07245-y/figures/1)，CC BY 4.0。*
 
-![三維地形圖：台灣](submission_assets/outputs/04_taiwan_3d.png)
+![三維地形圖：台灣](docs/images/taiwan_3d.png)
 
 *三維地形圖，本課 02 Notebook 的輸出。地震點也可以用 [PyGMT 3-D scatter](https://www.pygmt.org/v0.17.0/gallery/3d_plots/scatter3d.html) 放進透視圖。*
 
